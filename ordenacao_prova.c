@@ -29,19 +29,19 @@ void merge(int vet[], int e1, int d1, int e2, int d2) {
     int p = 0;
     int k = e2;
 
-    while((j<=d1 )&&(k<=d2)){
+    while((j <= d1 ) && (k <= d2)){
         if(vet[j] < vet[k])
             aux[p++]= vet[j++];
         else
             aux[p++] = vet[k++];
     }
-    for(;j<=d1;j++)
-        aux[p++]= vet[j];
+    for(; j <= d1; j++)
+        aux[p++] = vet[j];
 
-    for(;j<=d1;j++)
-        aux[p++]= vet[k];
+    for(; j <= d1; j++)
+        aux[p++] = vet[k];
 
-    p=0;
+    p = 0;
     
     for(j = e1; j <= d1; j++)
         vet[j] = aux[p++];
